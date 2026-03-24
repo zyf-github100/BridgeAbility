@@ -1,0 +1,33 @@
+# Local scratch
+/.codex-tmp/
+/output/
+/tmp/
+/tmp_*.txt
+
+# Local competition materials and packages
+/competition_assets/
+/competition_package/
+/competition_submission/
+/融职桥-全国赛提交包/
+/融职桥-全国赛提交包.zip
+/附件1：2026年广东省大学生计算机设计大赛软件应用与开发类校内选拔赛作品报名表.docx
+/22. 数据库建表 SQL 初版.md
+/第 1 分钟：问题提出.md
+/融职桥——面向残障大学生与青年求职者的无障碍就业协同平台》开发文档 v1.0.md
+
+# Deployment helpers and local-only files
+/tools/
+/backend/.codex-tmp/
+/backend/DEPLOYMENT.md
+/backend/README.md
+/backend/src/main/resources/data.sql
+
+# Build outputs and runtime data
+/backend/target/
+/backend/uploads/
+/frontend/node_modules/
+/frontend/dist/
+
+# Local UI screenshots
+/frontend/login-*.png
+/frontend/register-*.png
