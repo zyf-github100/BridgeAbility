@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>融职桥 - 求职者工作台</title>
+  <meta
+    name="description"
+    content="融职桥求职者工作台，聚焦能力画像、岗位适配、便利落实与就业跟踪。"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./prototype.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar" aria-label="主导航">
+      <div class="brand-block">
+        <span class="brand-mark">RZQ</span>
+        <div>
+          <p class="eyebrow">无障碍就业协同平台</p>
+          <h1>融职桥</h1>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="#workspace">工作台</a>
+        <a href="#recommendations">推荐岗位</a>
+        <a href="#timeline">跟踪时间线</a>
+      </nav>
+      <div class="utility-block">
+        <button type="button">高对比度</button>
+        <button type="button">大字号</button>
+        <span class="user-sign">求职者 / 林然</span>
+      </div>
+    </header>
+
+    <main id="workspace">
+      <section class="hero-band" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">求职者工作台</p>
+          <h2 id="hero-title">
+            不是把简历丢进系统，
+            <br>
+            而是把能力、环境与便利
+            <br>
+            放到同一张工作桌上。
+          </h2>
+          <p class="hero-summary">
+            页面围绕四件事组织信息：你能做什么、什么岗位真正合适、企业能否兑现支持，以及入职后是否能稳下来。
+            档案、岗位推荐、支持事项和跟踪进展集中呈现，方便持续处理。
+          </p>
+          <div class="hero-signals" aria-label="当前进展概览">
+            <div>
+              <span>资料完整度</span>
+              <strong>86%</strong>
+            </div>
+            <div>
+              <span>本周推荐岗位</span>
+              <strong>12 个</strong>
+            </div>
+            <div>
+              <span>待确认便利项</span>
+              <strong>2 项</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-board" aria-label="求职节奏概览">
+          <div class="board-ruler">
+            <span>能力画像</span>
+            <span>岗位适配</span>
+            <span>便利落实</span>
+            <span>稳定就业</span>
+          </div>
+          <div class="board-state">
+            <article>
+              <p class="board-label">当前身份描述</p>
+              <h3>数据整理 / 内容支持 / 结构化协作</h3>
+              <p>偏好文字沟通，适合混合办公，需要明确任务说明与可读性更高的材料。</p>
+            </article>
+            <dl class="board-metrics">
+              <div>
+                <dt>技能匹配均值</dt>
+                <dd>89</dd>
+              </div>
+              <div>
+                <dt>沟通方式匹配</dt>
+                <dd>74</dd>
+              </div>
+              <div>
+                <dt>便利可实现性</dt>
+                <dd>92</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="status-tape" aria-label="系统提示">
+            <span>今日重点</span>
+            <p>一家企业已同意提供文字版面试说明；一项远程面试申请待确认。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <aside class="profile-rail panel" aria-labelledby="profile-title">
+          <header class="panel-head">
+            <p class="eyebrow">个人档案</p>
+            <h3 id="profile-title">能力摘要</h3>
+          </header>
+
+          <div class="identity-block">
+            <p class="identity-name">林然</p>
+            <p class="identity-meta">应届生 / 南京 / 混合办公优先</p>
+            <p class="identity-note">
+              使用结构化文字沟通效率最高，适合文档处理、数据整理、内容校对与规则型任务。
+            </p>
+          </div>
+
+          <div class="ledger-group">
+            <p class="ledger-title">能力标签</p>
+            <ul class="plain-list">
+              <li>Excel / 数据整理</li>
+              <li>信息录入与核验</li>
+              <li>文案校对</li>
+              <li>流程执行稳定</li>
+            </ul>
+          </div>
+
+          <div class="ledger-group">
+            <p class="ledger-title">便利表达</p>
+            <ul class="plain-list compact">
+              <li>文字沟通优先</li>
+              <li>面试前提供书面任务说明</li>
+              <li>支持线上或混合面试</li>
+              <li>材料高对比度展示更佳</li>
+            </ul>
+          </div>
+
+          <div class="progress-strip" aria-label="建档进度">
+            <div>
+              <span>档案</span>
+              <strong>完成</strong>
+            </div>
+            <div>
+              <span>画像</span>
+              <strong>完成</strong>
+            </div>
+            <div>
+              <span>便利需求</span>
+              <strong>已授权 3 次</strong>
+            </div>
+          </div>
+        </aside>
+
+        <section class="recommendation-stage panel" id="recommendations" aria-labelledby="recommend-title">
+          <header class="panel-head stage-head">
+            <div>
+              <p class="eyebrow">岗位适配</p>
+              <h3 id="recommend-title">推荐岗位清单</h3>
+            </div>
+            <p class="stage-note">每个岗位同时展示任务内容、支持条件与风险提示，便于快速比较。</p>
+          </header>
+
+          <div class="stage-toolbar" aria-label="筛选条件">
+            <span>城市：南京</span>
+            <span>工作方式：混合 / 远程</span>
+            <span>沟通方式：文字优先</span>
+            <span>排序：按适配度</span>
+          </div>
+
+          <div class="job-ledger" role="list">
+            <article class="job-row" role="listitem">
+              <div class="row-score">
+                <span>适配度</span>
+                <strong>91</strong>
+              </div>
+              <div class="row-main">
+                <div class="row-titleline">
+                  <h4>数据整理助理</h4>
+                  <p>南京 · 某科技公司 · 混合办公</p>
+                </div>
+                <p class="row-summary">
+                  负责表格清洗、资料核验与信息回填，任务规则稳定，支持书面说明与线上协作。
+                </p>
+                <dl class="row-facts">
+                  <div>
+                    <dt>推荐理由</dt>
+                    <dd>技能贴合度高，工作节奏结构化，文字沟通成本低。</dd>
+                  </div>
+                  <div>
+                    <dt>便利支持</dt>
+                    <dd>提供文字面试、材料预发、弹性签到时段。</dd>
+                  </div>
+                  <div>
+                    <dt>风险提示</dt>
+                    <dd>部门早会以语音为主，建议增加同步纪要。</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="row-side">
+                <p>技能 93 / 沟通 78 / 环境 89 / 便利 96</p>
+                <a href="#">查看解释</a>
+                <button type="button">立即投递</button>
+              </div>
+            </article>
+
+            <article class="job-row" role="listitem">
+              <div class="row-score">
+                <span>适配度</span>
+                <strong>87</strong>
+              </div>
+              <div class="row-main">
+                <div class="row-titleline">
+                  <h4>内容校对与资料编辑</h4>
+                  <p>远程 · 教育机构 · 灵活时段</p>
+                </div>
+                <p class="row-summary">
+                  参与课程资料整理、文字校对与后台内容录入，以文档协作和异步沟通为主。
+                </p>
+                <dl class="row-facts">
+                  <div>
+                    <dt>推荐理由</dt>
+                    <dd>工作方式完全契合，沟通以协作平台消息为主。</dd>
+                  </div>
+                  <div>
+                    <dt>便利支持</dt>
+                    <dd>远程面试可选，支持延长作业提交时间。</dd>
+                  </div>
+                  <div>
+                    <dt>风险提示</dt>
+                    <dd>月底可能出现集中修改，需要确认节奏安排。</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="row-side">
+                <p>技能 85 / 沟通 88 / 环境 90 / 便利 89</p>
+                <a href="#">查看解释</a>
+                <button type="button">加入意向</button>
+              </div>
+            </article>
+
+            <article class="job-row" role="listitem">
+              <div class="row-score">
+                <span>适配度</span>
+                <strong>79</strong>
+              </div>
+              <div class="row-main">
+                <div class="row-titleline">
+                  <h4>运营支持专员</h4>
+                  <p>南京 · 互联网企业 · 线下为主</p>
+                </div>
+                <p class="row-summary">
+                  需要跨部门跟进活动资料和数据报表，偶发高频会议，任务本身匹配但环境存在波动。
+                </p>
+                <dl class="row-facts">
+                  <div>
+                    <dt>推荐理由</dt>
+                    <dd>具备文档与执行能力，流程型任务占比高。</dd>
+                  </div>
+                  <div>
+                    <dt>便利支持</dt>
+                    <dd>企业表示可提供书面任务拆解，但尚未确认面试形式。</dd>
+                  </div>
+                  <div>
+                    <dt>风险提示</dt>
+                    <dd>频繁线下会议和每日到岗可能带来沟通与通勤压力。</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="row-side">
+                <p>技能 88 / 沟通 62 / 环境 68 / 便利 76</p>
+                <a href="#">对比岗位</a>
+                <button type="button">谨慎申请</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <aside class="support-rail panel" id="timeline" aria-labelledby="timeline-title">
+          <header class="panel-head">
+            <p class="eyebrow">闭环跟踪</p>
+            <h3 id="timeline-title">本周时间线</h3>
+          </header>
+
+          <ol class="timeline-list">
+            <li>
+              <span class="timeline-date">03 / 21</span>
+              <div>
+                <strong>企业确认文字版面试说明</strong>
+                <p>某科技公司已接受先发任务说明，再进行线上沟通。</p>
+              </div>
+            </li>
+            <li>
+              <span class="timeline-date">03 / 23</span>
+              <div>
+                <strong>服务机构回访排期</strong>
+                <p>辅导员将复查授权范围，并确认是否需要字幕支持。</p>
+              </div>
+            </li>
+            <li>
+              <span class="timeline-date">03 / 28</span>
+              <div>
+                <strong>模拟面试</strong>
+                <p>重点准备自我介绍文字版和岗位风险说明的表达方式。</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="alert-strip">
+            <span>提醒</span>
+            <p>有 1 项便利授权将在 48 小时后失效，建议重新确认授权范围。</p>
+          </div>
+
+          <div class="contact-block">
+            <p class="ledger-title">支持联系人</p>
+            <p class="contact-name">南京某高校就业中心 / 王老师</p>
+            <p class="contact-meta">跟进方向：面试准备、入职 7 天回访、企业沟通</p>
+          </div>
+        </aside>
+      </section>
+
+    </main>
+  </div>
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</body>
+</html>

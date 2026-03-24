@@ -1,0 +1,20 @@
+[Unit]
+Description=BridgeAbility Backend
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=bridgeability
+Group=bridgeability
+WorkingDirectory=/opt/bridgeability/backend
+EnvironmentFile=/opt/bridgeability/backend/deploy/backend.env
+ExecStart=/opt/bridgeability/backend/scripts/start-backend.sh
+SuccessExitStatus=143
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

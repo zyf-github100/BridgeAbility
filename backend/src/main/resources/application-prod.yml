@@ -1,0 +1,8 @@
+spring:
+  sql:
+    init:
+      mode: ${SPRING_SQL_INIT_MODE:never}
+
+logging:
+  file:
+    name: ${APP_LOG_FILE:logs/application.log}

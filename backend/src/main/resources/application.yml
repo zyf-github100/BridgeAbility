@@ -1,0 +1,84 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+  application:
+    name: rongzhiqiao-backend
+  config:
+    import: optional:file:./config/application-mail.yml
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:${DB_URL:jdbc:mysql://localhost:3306/rongzhiqiao?useUnicode=true&characterEncoding=UTF-8&connectionCollation=utf8mb4_0900_ai_ci&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true}}
+    username: ${SPRING_DATASOURCE_USERNAME:${DB_USERNAME:root}}
+    password: ${SPRING_DATASOURCE_PASSWORD:${DB_PASSWORD:change-me}}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      initialization-fail-timeout: 0
+  sql:
+    init:
+      mode: ${SPRING_SQL_INIT_MODE:always}
+      encoding: UTF-8
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:${REDIS_HOST:localhost}}
+      port: ${SPRING_DATA_REDIS_PORT:${REDIS_PORT:6379}}
+      password: ${SPRING_DATA_REDIS_PASSWORD:${REDIS_PASSWORD:}}
+      database: ${SPRING_DATA_REDIS_DATABASE:${REDIS_DATABASE:0}}
+  jackson:
+    default-property-inclusion: non_null
+
+mybatis:
+  type-aliases-package: com.rongzhiqiao
+  configuration:
+    map-underscore-to-camel-case: true
+
+jwt:
+  issuer: rongzhiqiao
+  secret: ${JWT_SECRET:change-this-secret-change-this-secret-change-this-secret}
+  access-token-expire-minutes: 120
+
+logging:
+  level:
+    com.rongzhiqiao: ${APP_LOG_LEVEL:info}
+
+app:
+  auth:
+    verification:
+      require-email-code: true
+      code-length: 6
+      expire-minutes: 5
+      cooldown-seconds: 60
+      max-attempts: 5
+      subject: "${MAIL_VERIFICATION_SUBJECT:[BridgeAbility] Verification code}"
+      from-address: ${MAIL_FROM_ADDRESS:}
+      from-name: ${MAIL_FROM_NAME:BridgeAbility}
+  storage:
+    provider: ${APP_STORAGE_PROVIDER:auto}
+    local-root: ${APP_STORAGE_LOCAL_ROOT:uploads}
+    r2:
+      endpoint: ${R2_ENDPOINT:}
+      bucket: ${R2_BUCKET:}
+      access-key-id: ${R2_ACCESS_KEY_ID:}
+      secret-access-key: ${R2_SECRET_ACCESS_KEY:}
+      region: ${R2_REGION:auto}
+  privacy:
+    encryption-secret: ${APP_PRIVACY_ENCRYPTION_SECRET:change-this-privacy-encryption-secret}
+  matching:
+    score-weights:
+      skill: 34
+      work-mode: 19
+      communication: 18
+      environment: 14
+      accommodation: 15
+    risk:
+      penalty-per-risk: 5
+      penalty-per-blocking-risk: 12
+      max-penalty: 40
+      hard-filtered-max-score: 24
+    candidate-stage:
+      match-score-weight: 7
+      profile-completion-weight: 3
+      priority-threshold: 85
+      follow-up-threshold: 68

@@ -1,0 +1,10 @@
+run-local-r2.ps1
+config/application-mail.yml
+deploy/backend.env
+logs/
+run/
+*.hprof
+target/
+uploads/
+*.log
+cp.txt

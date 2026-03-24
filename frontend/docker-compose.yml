@@ -1,0 +1,9 @@
+services:
+  frontend:
+    build:
+      context: .
+    container_name: bridgeability-frontend
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      BACKEND_ORIGIN: ${BACKEND_ORIGIN:?BACKEND_ORIGIN is required}
